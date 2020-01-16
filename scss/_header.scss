@@ -1,0 +1,79 @@
+.header{
+    background-image: url('../img/hero-bg.jpg');
+    height: 140vh;
+    background-position: center;
+    background-size: cover;
+
+    &__logo{
+        position: fixed;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%);
+
+        &--scrolled {
+            display: none;
+        }
+    }
+
+    &__nav-mobile{
+        position: fixed;
+        width: 100%;
+        top: 130px;
+        display: flex;
+        border-top: 1px rgba(254, 255, 250, 0.3) solid;
+        border-bottom: 1px rgba(254, 255, 250, 0.3) solid;
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+        transition: ease .5s;
+
+        &--scrolled{
+            top: 0;
+            background-color: #000;
+        }
+    }
+
+    &__menu-title{
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    &__text{
+        padding-top: 63vh;
+        margin: 0 10px 50px 20px;
+        display: flex;
+        flex-direction: column;   
+    }
+
+    &__subtitle{
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    &__title{
+        font-size: 45px;
+        margin-top: 20px;
+    }
+
+    &__description{
+        margin-top: 20px;
+        font-size: 15px;
+ 
+    }
+
+    &__button{
+        margin-top: 20px;
+        height: 50px;
+        width: 60%;
+        border: none;
+        background-color: #db3232;
+        font-family: 'Roboto';
+        color: #fff;
+        font-weight: bold;
+    }
+
+    &__burger{
+        position: relative;
+        z-index: 10000000;
+    }
+}
