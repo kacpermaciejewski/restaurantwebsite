@@ -92,16 +92,57 @@
     .header{
         padding-left: 15%;
         padding-right: 15%;
-        padding-top: 100px;
         &__nav-mobile{
             display: none;
         }
 
         &__nav{
-            width: 100%;
-            height: 50px;
-            border-top: 1px solid #fff;
-            border-bottom: 1px solid #fff;
+            position: fixed;
+            top: 130px;
+            width: 70%;
+            height: 70px;
+            border-top: 1px rgba(254, 255, 250, 0.3) solid;
+            border-bottom: 1px rgba(254, 255, 250, 0.3) solid;
+
+            &--scrolled{
+                top: 0;
+                background-color: rgba(0,0,0, 0.6);
+                border: none;
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        &__list{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+
+        &__item {
+            margin-right: 20px;
+        }
+
+        &__link{
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: uppercase;
+            transition: color .3s ease-in-out;
+            
+            &:hover{
+             color: #db3232;   
+            }
+        }
+
+        &__text{
+            width: 40%;
+        }
+        
+        &__title{
+            font-size: 60px;
         }
     }
 }

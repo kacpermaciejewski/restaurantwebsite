@@ -23,6 +23,7 @@ overlay.addEventListener('click', ()=>{
 //Scroll
 const menuBar = document.querySelector(".header__nav-mobile")
 const logo = document.querySelector(".header__logo")
+const menu = document.querySelector(".header__nav")
 
 
 
@@ -35,7 +36,7 @@ window.addEventListener("scroll",()=>{
             if(window.scrollY> window.innerHeight*0.1){
                 menuBar.classList.add("header__nav-mobile--scrolled")
                 logo.classList.add("header__logo--scrolled")
-                console.log('done')
+            
                 
             }
             else{
@@ -47,7 +48,7 @@ window.addEventListener("scroll",()=>{
         if(window.scrollY> window.innerHeight*0.35){
             menuBar.classList.add("header__nav-mobile--scrolled")
             logo.classList.add("header__logo--scrolled")
-            console.log('done')
+          
             
         }
         else{
@@ -57,4 +58,17 @@ window.addEventListener("scroll",()=>{
         }
 
     } 
+
+    else{
+        if(window.scrollY> window.innerHeight*0.2){
+            menu.classList.add("header__nav--scrolled")
+            logo.classList.add("header__logo--scrolled")
+         
+            
+        }
+        else{
+            menu.classList.remove("header__nav--scrolled")
+            logo.classList.remove("header__logo--scrolled")
+        }
+    }
 })
