@@ -31,6 +31,19 @@ if(window.innerWidth<1024){
 }
 window.addEventListener("scroll",()=>{
     if(window.innerWidth<1024){
+        if(window.innerWidth>=768){
+            if(window.scrollY> window.innerHeight*0.1){
+                menuBar.classList.add("header__nav-mobile--scrolled")
+                logo.classList.add("header__logo--scrolled")
+                console.log('done')
+                
+            }
+            else{
+                menuBar.classList.remove("header__nav-mobile--scrolled")
+                logo.classList.remove("header__logo--scrolled")
+            }
+        }
+        else{
         if(window.scrollY> window.innerHeight*0.35){
             menuBar.classList.add("header__nav-mobile--scrolled")
             logo.classList.add("header__logo--scrolled")
@@ -41,7 +54,7 @@ window.addEventListener("scroll",()=>{
             menuBar.classList.remove("header__nav-mobile--scrolled")
             logo.classList.remove("header__logo--scrolled")
         }
-    
+        }
 
     } 
 })
