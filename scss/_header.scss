@@ -30,10 +30,11 @@
         justify-content: space-between;
         align-items: center;
         transition: ease .5s;
+        z-index: 2;
 
         &--scrolled{
             top: 0;
-            background-color: #000;
+            background-color: rgba(0,0,0, 0.9);
         }
     }
 
@@ -99,6 +100,7 @@
             height: 70px;
             border-top: 1px rgba(254, 255, 250, 0.3) solid;
             border-bottom: 1px rgba(254, 255, 250, 0.3) solid;
+            z-index:2;
 
             &--scrolled{
                 top: 0;

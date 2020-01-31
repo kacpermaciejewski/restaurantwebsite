@@ -72,3 +72,88 @@ window.addEventListener("scroll",()=>{
         }
     }
 })
+
+//Menu section
+
+const menuList = document.querySelectorAll(".menu__item");
+const menuArticles= document.querySelectorAll(".menu__article")
+
+menuList.forEach(item =>{
+
+item.addEventListener('click',e=>{
+    menuList.forEach(el =>{
+        el.classList.remove('menu__item--active')
+    })
+    e.target.classList.add("menu__item--active")
+
+//     //rendering articles
+let counter = 0;
+let distance = 180;
+let name = item.getAttribute("data-name")
+if(window.innerWidth<1024){
+if(name != "all"){
+    menuArticles.forEach(el =>{
+        let elName = el.getAttribute("data-name");
+        if(name == elName){
+            el.style.top = `${counter*distance}px`;
+            el.style.display = "block";
+            el.classList.add("menu__article--active");
+            counter++
+        }
+        else{
+            el.classList.remove("menu__article--active")
+            el.style.display = "none"
+            
+        }
+    })
+}
+else if(name == "all"){
+    
+    menuArticles.forEach(el =>{
+        el.style.top ="";
+    el.style.display = "block"
+    el.classList.add("menu__article--active");
+    })
+}}
+else if(window.innerWidth >=1024){
+   if(name != "all"){
+    menuArticles.forEach(el =>{
+        let elName = el.getAttribute("data-name");
+        if(name == elName){
+            el.style.top = `0`;
+            if(counter>0 && counter%2>0){
+                el.style.left = "60%";
+            }
+            else{
+                el.style.left = 0
+            }
+            el.style.display = "block";
+            el.classList.add("menu__article--active");
+            counter++
+        }
+        else{
+            el.classList.remove("menu__article--active")
+            el.style.display = "none"
+            
+        }
+    })
+
+
+   } 
+
+   else if(name == "all"){
+    
+    menuArticles.forEach(el =>{
+        el.style.top ="";
+        el.style.left = ""
+    el.style.display = "block"
+    el.classList.add("menu__article--active");
+    })
+}
+}
+
+
+   
+})
+
+})

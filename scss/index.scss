@@ -9,16 +9,18 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #fff;
 
+
     &.scroll{
         overflow: hidden;
     }
 }
 
 
-
+@import './colors';
 @import './mobileMenu';
 @import './button';
 @import './header';
 @import './regular';
 @import './about';
+@import './menu';
 
