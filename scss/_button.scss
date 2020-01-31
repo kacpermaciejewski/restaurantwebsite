@@ -1,0 +1,30 @@
+.button{
+    height: 50px;
+    width: 60%;
+    border: none;
+    background-color: #db3232;
+    font-family: 'Roboto';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &--header{
+        margin-top: 20px;
+    }
+}
+
+@media(min-width: 1024px){
+    .button{
+        cursor: pointer;
+        transition: background-color .3s ease-in-out;
+
+        &--header{
+            margin-top: 40px;
+            width: 40%; 
+        }
+
+        &:hover{
+            background-color: #2B2A2A;
+        } 
+    }
+}

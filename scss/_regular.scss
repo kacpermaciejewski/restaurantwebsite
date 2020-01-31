@@ -1,0 +1,11 @@
+.regular{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media(min-width: 1024px){
+    .regular{
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+}
