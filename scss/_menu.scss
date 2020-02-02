@@ -131,7 +131,8 @@ border-bottom-left-radius: 10px;
 
 @media(min-width: 1024px){
     .menu{
-
+min-height: 0vh;
+height: 100vh;
         &__list{
             flex-direction: row;
             width: 100%;
